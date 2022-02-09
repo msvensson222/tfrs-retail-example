@@ -24,20 +24,28 @@ This is used to create a virtual environment and install all python packages ins
 
 To install poetry just run:
 ```
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+$ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 ```
 
 Once installed, you can install all the required packages (including dev packages) with the following:
 ```
-poetry install
+$ poetry install
 ```
 
 To enter the virtualenv in order to run commands with the installed packages, use
 ```
-poetry shell
+$ poetry shell
 ```
 which will activate the virtualenv for you.
 
+#### Jupyter 
+
+You may need to create a kernel before launching Jupyter: 
+```
+$ poetry run ipython kernel install --user --name=<KERNEL_NAME>
+$ jupyter notebook
+```
+And then select the created kernel in “Kernel” -> “Change kernel”.
 
 
 
